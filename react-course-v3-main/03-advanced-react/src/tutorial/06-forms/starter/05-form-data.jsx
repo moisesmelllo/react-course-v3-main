@@ -5,6 +5,27 @@ const UncontrolledInputs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+
+    let isAnyFieldEmpty = false;
+
+    for (const [name, value] of formData.entries()) {
+      if (value.trim() === '') {
+        isAnyFieldEmpty = true;
+        break
+      }
+    }
+
+    if (isAnyFieldEmpty) {
+      alert('Por favor, preencha todos os campos antes de enviar o formulario!')
+      return;
+    }
+
+
+    const newUser = Object.fromEntries(formData)
+    console.log(newUser)
+    setValue(value + 1)
+    e.currentTarget.reset()
   };
   return (
     <div>
@@ -24,7 +45,7 @@ const UncontrolledInputs = () => {
           </label>
           <input type='email' className='form-input' id='email' name='email' />
         </div>
-        {/* email */}
+        {/* password */}
         <div className='form-row'>
           <label htmlFor='password' className='form-label'>
             Password
