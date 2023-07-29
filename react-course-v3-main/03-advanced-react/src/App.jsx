@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import Starter from './tutorial/08-custom-hooks/starter/02-fetch-data';
+import Starter from './tutorial/10-useReducer/starter/01-useReducer';
 
 
 function App() {
