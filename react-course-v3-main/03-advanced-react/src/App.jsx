@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import Starter from './tutorial/05-leverage-javascript/starter/List.jsx';
+import Starter from './tutorial/06-forms/starter/02-user-challenge';
 
 
 function App() {
