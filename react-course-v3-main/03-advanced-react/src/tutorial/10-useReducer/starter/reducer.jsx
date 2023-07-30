@@ -5,7 +5,7 @@ const reducer = (state, action) => {
   if (action.type === 'CLEAR_LIST') {
     return { ...state, people: [] }
   }
-
+ 
   if (action.type === 'RESET_LIST') {
     return { ...state, people: data }
   }
